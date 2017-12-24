@@ -20,7 +20,7 @@ If one of the following test is true, the function immediately return true.
 
 Otherwise the function returns false.
 
-## Examples
+## Example
 ```js
   const isHttps = require('isHttps');
   // for express users
