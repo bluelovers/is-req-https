@@ -22,9 +22,9 @@ Otherwise the function returns false.
 
 ## Example
 ```js
-  const isHttps = require('is-req-https');
-  // for express users
-  app.use((req, res, next) => {
-    req.isSecure = isHttps(req);
+const isHttps = require('is-req-https');
+// for express users
+app.use((req, res, next) => {
+  req.isSecure = isHttps(req);
 });
-``
+```
