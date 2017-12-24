@@ -11,14 +11,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idandagan1/npm-isHttps.git"
+    "url": "git+https://github.com/idandagan1/is-req-https.git"
   },
-  "author": "Idan Dagan",
+  "author": "Idan Dagan <idandagan1@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/idandagan1/npm-isHttps/issues"
+    "url": "https://github.com/idandagan1/is-req-https/issues"
   },
-  "homepage": "https://github.com/idandagan1/npm-isHttps#readme",
+  "homepage": "https://github.com/idandagan1/is-req-https#readme",
   "devDependencies": {
     "eslint": "^4.14.0",
     "eslint-config-airbnb": "^16.1.0",
