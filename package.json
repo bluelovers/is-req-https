@@ -1,5 +1,5 @@
 {
-  "name": "ishttps",
+  "name": "is-req-https",
   "version": "1.0.0",
   "description": "This module returns whether a request is under https",
   "main": "index.js",

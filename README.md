@@ -1,9 +1,9 @@
-# isHttps
+# is-req-https
 This module returns whether a request is under https
 
 ## Installation
 ```bash
-npm i isHttps -S
+npm i is-req-https -S
 ```
 
 ## Users
@@ -22,7 +22,7 @@ Otherwise the function returns false.
 
 ## Example
 ```js
-  const isHttps = require('isHttps');
+  const isHttps = require('is-req-https');
   // for express users
   app.use((req, res, next) => {
     req.isSecure = isHttps(req);
