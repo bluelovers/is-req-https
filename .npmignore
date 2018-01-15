@@ -2,4 +2,6 @@ src
 test
 
 .babelrc
-.eslintrc
+.history
+.vscode
+.eslintrc.js
