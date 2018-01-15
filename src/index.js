@@ -2,13 +2,9 @@
  * Created by Idan Dagan on 24/12/2017.
 */
 
-function hasOwnProp(obj, prop) {
-    return Object.prototype.hasOwnProperty.call(obj, prop);
-}
+const hasOwnProp = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop);
 
-module.exports.isHttps = isHttps;
-
-function isHttps(req) {
+module.exports = function (req) {
 
     // For node requests without any framework
     if (hasOwnProp(req, 'connection')) {
