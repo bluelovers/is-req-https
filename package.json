@@ -1,36 +1,45 @@
 {
-  "name": "is-req-https",
+  "name": "is-req-https2",
   "version": "1.0.5",
   "description": "This module returns whether a request is under https",
-  "main": "./lib/index.js",
-  "scripts": {
-    "clean": "rm -rf lib/ dist/",
-    "build": "npm run clean && babel src --out-dir lib",
-    "test": "mocha test/*.js",
-    "prepublish": "npm run build && npm run test"
-  },
   "keywords": [
     "https"
   ],
+  "homepage": "https://github.com/bluelovers/is-req-https#readme",
+  "bugs": {
+    "url": "https://github.com/bluelovers/is-req-https/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/idandagan1/is-req-https.git"
+    "url": "git+https://github.com/bluelovers/is-req-https.git"
   },
-  "author": "Idan Dagan <idandagan1@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/idandagan1/is-req-https/issues"
+  "author": "Idan Dagan <idandagan1@gmail.com>",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
   },
-  "homepage": "https://github.com/idandagan1/is-req-https#readme",
+  "scripts": {
+    "coverage": "npx nyc yarn run test",
+    "lint": "npx eslint **/*.ts",
+    "ncu": "npx yarn-tool ncu -u",
+    "npm:publish": "npm publish",
+    "postpublish": "git commit -m \"chore(release): publish\" .",
+    "prepublish:lockfile": "npx sync-lockfile .",
+    "prepublishOnly": "yarn run ncu && yarn run sort-package-json && yarn run test",
+    "sort-package-json": "npx yarn-tool sort",
+    "test": "yarn run test:mocha",
+    "test:mocha": "npx mocha --require ts-node/register \"!(node_modules)/**/*.{test,spec}.{ts,tsx}\"",
+    "tsc:default": "tsc -p tsconfig.json",
+    "tsc:esm": "tsc -p tsconfig.esm.json"
+  },
+  "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-babili": "^0.1.4",
-    "babel-preset-es2015": "^6.24.1",
-    "eslint": "^4.14.0",
-    "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "eslint-plugin-jsx-a11y": "^6.0.3",
-    "eslint-plugin-react": "^7.5.1",
-    "mocha": "^4.1.0"
+    "@bluelovers/tsconfig": "^1.0.16",
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/chai": "^4.2.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.5.0",
+    "chai": "^4.2.0"
   }
 }
