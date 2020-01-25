@@ -20,6 +20,14 @@ function checkResHttp(req: IResponseLike, options: {
 		return !!req.secure;
 	}
 
+	/**
+	 * https://github.com/nuxt-community/is-https/blob/master/index.js
+	 */
+	if ('protocol' in req && req.protocol === 'https')
+	{
+		return true;
+	}
+
 	// Test the headers
 	if (options.xForwardedProto && ('headers' in req) && req.headers['x-forwarded-proto'])
 	{

@@ -15,4 +15,6 @@ export declare type IResponseLike = {
             protocol?: any;
         };
     };
+} | {
+    protocol?: any;
 };

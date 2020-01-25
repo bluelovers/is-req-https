@@ -16,4 +16,6 @@ export type IResponseLike = {
 			protocol?: any
 		}
 	},
+} | {
+	protocol?: any,
 }

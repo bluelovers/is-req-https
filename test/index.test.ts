@@ -36,4 +36,12 @@ it('is-req-https', () =>
 		secure: true,
 	})).to.be.ok;
 
+	expect(isHttps({
+		protocol: 'https',
+	})).to.be.ok;
+
+	expect(isHttps({
+		protocol: 'http',
+	})).to.be.not.ok;
+
 });

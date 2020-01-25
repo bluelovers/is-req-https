@@ -1,8 +1,11 @@
 {
   "name": "is-req-https2",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "This module returns whether a request is under https",
   "keywords": [
+    "express",
+    "hapi",
+    "response",
     "https"
   ],
   "homepage": "https://github.com/bluelovers/is-req-https#readme",
