@@ -1,6 +1,6 @@
 {
   "name": "is-req-https2",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This module returns whether a request is under https",
   "keywords": [
     "https"
