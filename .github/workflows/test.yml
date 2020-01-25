@@ -17,4 +17,5 @@ jobs:
       - run: |
           yarn install
           yarn global add ts-node esm typescript@next nyc
+          export PATH="$PATH:/usr/local/share/.config/yarn/global"
       - run: yarn run coverage
