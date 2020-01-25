@@ -16,6 +16,6 @@ jobs:
           node-version: 13
       - run: |
           yarn install
-          npm install -g ts-node esm typescript@next nyc
-          export PATH="$PATH:/usr/local/share/.config/yarn/global/node_modules"
+          yarn add -D ts-node esm typescript@next nyc
+#          export PATH="$PATH:/usr/local/share/.config/yarn/global/node_modules"
       - run: yarn run coverage
