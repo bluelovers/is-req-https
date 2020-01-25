@@ -15,4 +15,4 @@ jobs:
         with:
           node-version: 13
       - run: yarn install
-      - run: yarn run ci:task
+      - run: yarn run test
