@@ -26,11 +26,26 @@ it('is-req-https', () =>
 
 	expect(isHttps(httpsReq)).to.be.ok;
 	expect(isHttps(httpReq)).to.be.not.ok;
+	expect(isHttps({
+		server: {
+			info: {
+				protocol: 'https',
+			},
+		},
+	})).to.be.ok;
 
 	expect(isHttps(httpForwarded)).to.be.not.ok;
 	expect(isHttps(httpForwarded, {
 		xForwardedProto: true,
 	})).to.be.ok;
+
+	expect(isHttps({
+		headers: {
+			'x-forwarded-proto': 'http',
+		},
+	}, {
+		xForwardedProto: true,
+	})).to.be.not.ok;
 
 	expect(isHttps({
 		secure: true,
@@ -43,5 +58,11 @@ it('is-req-https', () =>
 	expect(isHttps({
 		protocol: 'http',
 	})).to.be.not.ok;
+
+	expect(isHttps({
+		connection: {
+			encrypted: true,
+		},
+	})).to.be.ok;
 
 });
