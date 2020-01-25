@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 13
-      - run:
-          - yarn install
-          - yarn global add ts-node esm typescipt@next
+      - run: |
+          yarn install
+          yarn global add ts-node esm typescipt@next
       - run: yarn run test
