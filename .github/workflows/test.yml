@@ -16,5 +16,5 @@ jobs:
           node-version: 13
       - run: |
           yarn install
-          yarn global add ts-node esm typescipt@next
-      - run: yarn run test
+          yarn global add ts-node esm typescript@next nyc
+      - run: yarn run coverage
